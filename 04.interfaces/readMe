@@ -8,7 +8,7 @@ Ders: 4
 --------
 Not:
 --------
-*	Derste işlenen önemli konular: Dependency injenction, static methods
+*	Derste işlenen önemli konular: Interfaces, Dependency injection, static methods
 
 *	Bu derste işlenen dependency injection konusunun ileri seviyelerinde farklı metot seviyelerinde
 	farklı log mekanizmalarının devreye sokulabilmesi için AOP (aspect oriented) yaklaşımının 
