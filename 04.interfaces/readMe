@@ -1,0 +1,19 @@
+Engin Demiroğ tarafından 2021-04, 2021-05 tarihlerinde verilen Java Yazılım Geliştirici Yetiştirme Kampı (JAVA + REACT)
+kursu için oluşturulan projedir.
+
+Kurs linki: https://www.kodlama.io/courses/enrolled/1332369
+
+--------
+Ders: 4
+--------
+Not:
+--------
+*	Derste işlenen önemli konular: Dependency injenction, static methods
+
+*	Bu derste işlenen dependency injection konusunun ileri seviyelerinde farklı metot seviyelerinde
+	farklı log mekanizmalarının devreye sokulabilmesi için AOP (aspect oriented) yaklaşımının 
+	kullanılması gerektiğine değinildi.
+
+*	Ayrıca "Constructor Hell" konsepti de anıldı.
+
+*	Eğitimin devam eden kısımlarında yavaş yavaş spring ve spring boot üzerinden devam edilecek.
