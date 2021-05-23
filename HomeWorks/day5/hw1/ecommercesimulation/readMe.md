@@ -39,3 +39,13 @@ Github adresinizi paylaşınız.
 ÖDEV FAYDASI:
 -------------
 Ödev ile katmanlı mimaride geliştirme, dış servislerin entagrasyonu modellemesi amaçlanmaktadır.
+
+-------------
+ÖDEV NOTU:
+-------------
+Bu ödev <a href="https://github.com/Sanchklyc/JavaKampProject/tree/master/eCommerceSimulation/src/eCommerceSimulation">Halit Enes Kahyacı'nın kodları</a> örnek alınarak ve üzerinde dil, logic, ve model revizyonları yapılarak geliştirildi.
+
+Temel revizyonlar:
+--------------------------
+1) AuthService core paketinden business paketine çekildi.<br>
+2) UserService ve UserDao interfacelerinin tanımladığı ortak metotlar için bir super interface tanımlandı: UserServicesCommonOperations
