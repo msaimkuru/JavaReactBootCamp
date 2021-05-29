@@ -4,7 +4,10 @@ import java.util.List;
 import ecommercesimulation.business.abstracts.UserService;
 import ecommercesimulation.dataaccess.abstracts.UserDao;
 import ecommercesimulation.entities.concretes.User;
-
+/*
+ * Composes a reference to a UserDao object
+ * Performs all operations on that UserDao object
+ */
 public class UserManager implements UserService {
 
 	private UserDao userDao;

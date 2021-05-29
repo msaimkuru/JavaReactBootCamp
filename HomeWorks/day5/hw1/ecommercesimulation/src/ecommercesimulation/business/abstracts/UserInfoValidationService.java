@@ -4,6 +4,6 @@ import ecommercesimulation.entities.concretes.User;
 /*
  * Interface defining User Validation protocol.
  */
-public interface UserValidationService {
+public interface UserInfoValidationService {
 	boolean validate(User user);
 }

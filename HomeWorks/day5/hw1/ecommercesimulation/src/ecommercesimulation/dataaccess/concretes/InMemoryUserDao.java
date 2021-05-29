@@ -11,16 +11,16 @@ public class InMemoryUserDao implements UserDao {
 
 	@Override
 	public void add(User user) {
-		users.add(user);
+		this.users.add(user);
 	}
 
 	@Override
 	public void remove(User user) {
 		// we can also utilize a lambda expression such:
 		// users.removeIf(obj -> obj.getId() == user.getId());
-		for (int i = 0; i < users.size(); i++) {
-			if (users.get(i).getId() == user.getId()) {
-				users.remove(i);
+		for (int i = 0; i < this.users.size(); i++) {
+			if (this.users.get(i).getId() == user.getId()) {
+				this.users.remove(i);
 			}
 		}
 	}
@@ -35,7 +35,7 @@ public class InMemoryUserDao implements UserDao {
 
 	@Override
 	public User get(int id) {
-		for (User user : users) {
+		for (User user : this.users) {
 			if (user.getId() == id)
 				return user;
 		}
@@ -49,7 +49,7 @@ public class InMemoryUserDao implements UserDao {
 
 	@Override
 	public User getByEmail(String email) {
-		for (User user : users) {
+		for (User user : this.users) {
 			if (user.getEmail() == email)
 				return user;
 		}
@@ -58,7 +58,7 @@ public class InMemoryUserDao implements UserDao {
 
 	@Override
 	public User getByEmailAndPassword(String email, String password) {
-		for (User user : users) {
+		for (User user : this.users) {
 			if (user.getEmail() == email && user.getPassword() == password)
 				return user;
 		}
