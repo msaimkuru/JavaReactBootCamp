@@ -7,10 +7,27 @@ import ecommercesimulation.business.abstracts.UserInfoValidationService;
 import ecommercesimulation.core.utils.BusinessRules;
 import ecommercesimulation.entities.concretes.User;
 
+/*
+ * AuthManager composes;
+ * A UserService object
+ *		to check if an email is registered before for any user
+ * 		to add a new user in a successful registration process
+ * 		to check in a new registration process if an email is registered before 
+ * 		to check in a login process if given user, password pair exists or not
+ * 
+ * A UserInfoValidationService object
+ * 		to validate in a new registration process given user info
+ * 
+ * An EmailService object
+ * 		to send an email to the user after a successful registration process
+ */
 public class AuthManager implements AuthService {
 	UserService userService;
 	UserInfoValidationService userInfoValidationService;
 	EmailService emailService;
+	
+	private User userToRegister;
+	private User userToLogin;
 
 	public AuthManager(UserService userService, UserInfoValidationService userInfoValidationService,
 			EmailService emailService) {
@@ -21,7 +38,7 @@ public class AuthManager implements AuthService {
 
 	@Override
 	public void register(int id, String email, String password, String firstName, String lastName) {
-		User userToRegister = new User(id, email, password, firstName, lastName, false);
+		userToRegister = new User(id, email, password, firstName, lastName, false);
 		System.out.println(
 				"~~~~~~~~~~~~~~~~~~~~ user registration for : " + firstName + " " + lastName + " ~~~~~~~~~~~~~~~~~~~~");
 		// 1. Invoke user info validation rules
@@ -49,7 +66,7 @@ public class AuthManager implements AuthService {
 			return;
 		}
 		// 2. Check if user given by user-name, password pair exists or not.
-		User userToLogin = userService.getByEmailAndPassword(email, password);
+		userToLogin = userService.getByEmailAndPassword(email, password);
 
 		if (userToLogin == null) {
 			System.out.println("Login failed. Wrong password or email address.");

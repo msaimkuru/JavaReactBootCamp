@@ -9,7 +9,7 @@ import ecommercesimulation.entities.concretes.User;
  * UserService and UserDao interfaces. 
  */
 public interface UserServicesCommonOperations {
-	// Main operations
+	// Main user service operations
 	void add(User user);
 
 	void remove(User user);
